@@ -70,7 +70,9 @@ function copyFiles(from: string, to: string): string[] {
 }
 
 copyFiles(join(here, 'dashboard'), join(out, 'dashboard'));
-const shots = copyFiles(join(here, 'screenshots'), join(out, 'screenshots'));
+// Deterministic hand-in order: name-sorted shots make the board, detail and
+// filtered views land in the same positions on every run and every machine.
+const shots = copyFiles(join(here, 'screenshots'), join(out, 'screenshots')).sort();
 if (shots.length < 3) {
   process.stderr.write(`token radar: screenshots/ holds ${shots.length} image${shots.length === 1 ? '' : 's'}: hand in 3, the board, a detail view and a filtered view\n`);
   process.exit(1);
