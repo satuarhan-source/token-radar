@@ -1,7 +1,7 @@
 # NLP Research Landscape 2016-2025 (OpenAlex) — Solara Report, Corrected PULL 1-3
 
 ## Executive summary
-Natural language processing research output is 12927 works in 2016 rising to 36468 works in 2025 across OpenAlex topic T10181 (Natural Language Processing Techniques), a compound yearly growth of 12.2100% over the nine year span. Open access adoption is strong and rising: the share of open-access works grows from 48.13% in 2016 to 75.12% in 2025, and the highest open-access share falls in 2025 at 75.12%. Three timed pulls of the same two OpenAlex queries on 22, 23 and 24 November 2026 (UTC) show the field's counts moving only slightly day to day, confirming a mature, slowly compounding output base with steady OA conversion. All figures below are computed from the PULL 3 CSV, which is attached with the corrected five-column schema and cross-checked against both raw meta counts of every pull.
+Natural language processing research output is 12927 works in 2016 rising to 36468 works in 2025 across OpenAlex topic T10181 (Natural Language Processing Techniques), a compound yearly growth of 12.21% over the nine year span. Open access adoption is strong and rising: the share of open-access works grows from 48.13% in 2016 to 75.12% in 2025, and the highest open-access share falls in 2025 at 75.12%. Three timed pulls of the same two OpenAlex queries on 22, 23 and 24 November 2026 (UTC) show the field's counts moving only slightly day to day, confirming a mature, slowly compounding output base with steady OA conversion. All figures below are computed from the PULL 3 CSV, which is attached with the corrected five-column schema and cross-checked against both raw meta counts of every pull.
 
 ## Year table (PULL 3)
 | Year | Works | OA works | OA share % | Works change |
@@ -18,7 +18,7 @@ Natural language processing research output is 12927 works in 2016 rising to 364
 | 2025 | 36468 | 27394 | 75.12 | 10545 |
 
 ## Growth and highlight
-- Compound yearly growth (works 2025 over works 2016, to the power one ninth, minus 1): **12.2100%**
+- Compound yearly growth (works 2025 over works 2016, to the power one ninth, minus 1): **12.21%** (unrounded 12.213736…%, 2 decimals, half away from zero)
 - Year with the highest open-access share: **2025** (75.12%)
 
 ## Raw meta counts per pull
