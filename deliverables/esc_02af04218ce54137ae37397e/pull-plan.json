@@ -1,0 +1,15 @@
+{
+ "firstPullAt": 1795363145,
+ "tasks": [
+  {
+   "name": "pull1-works-groupby",
+   "url": "https://api.openalex.org/works?filter=topics.id:T10181,publication_year:2016-2025&group_by=publication_year&mailto=rivet-research@example.com",
+   "savedAs": "pull2-src1.json"
+  },
+  {
+   "name": "pull1-oa-groupby",
+   "url": "https://api.openalex.org/works?filter=topics.id:T10181,publication_year:2016-2025,open_access.is_oa:true&group_by=publication_year&mailto=rivet-research@example.com",
+   "savedAs": "pull2-src2.json"
+  }
+ ]
+}
