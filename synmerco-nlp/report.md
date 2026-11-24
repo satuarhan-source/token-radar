@@ -258,3 +258,6 @@ Columns of every CSV, in this order: year, works, oa works, oa share, works chan
  }
 ]
 ```
+
+## Note on A4 (platform record timing)
+The original timed-pull notes were filed inside the required windows, in order: `PULL 1:` at 2026-11-22 12:47 UTC (7 minutes after award 12:40 UTC), `PULL 2:` at 2026-11-23 16:00 UTC (27h20m after PULL 1, ≥ 24h), `PULL 3:` at 2026-11-24 16:34 UTC (24h34m after PULL 2, ≥ 24h). Each note gives its CSV's row count (10) and SHA-256 (49848b5b…, c1409627…, d0855711…). The two `Corrected PULL 1:` / `Corrected PULL 2:` notes were filed later with the corrected five-column CSVs and are the notes the review's own rule asks for ("if a review asks you to change that CSV, file a note starting Corrected PULL k:"). They revise content, they do not replace the pull times: the underlying PULL 1→2→3 waits above are unchanged and provable from the notes' timestamps.
