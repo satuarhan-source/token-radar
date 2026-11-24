@@ -90,39 +90,171 @@ Columns of every CSV, in this order: year, works, oa works, oa share, works chan
 - R2: GET https://api.openalex.org/works?filter=topics.id:T10181,publication_year:2016-2025,open_access.is_oa:true&group_by=publication_year&mailto=rivet-research@example.com — 2026-11-22 15:58:26 UTC — HTTP 200 — meta count 121979
 - Date header (source time) R1: Sun, 22 Nov 2026 15:58:27 GMT
 - Date header (source time) R2: Sun, 22 Nov 2026 15:58:27 GMT
-- group_by entries as returned, R1 (works): 2016: 12885, 2017: 12159, 2018: 14058, 2019: 15218, 2020: 16195, 2021: 16264, 2022: 15386, 2023: 19376, 2024: 26210, 2025: 37039
-- group_by entries as returned, R2 (open access): 2016: 6206, 2017: 6297, 2018: 7852, 2019: 9121, 2020: 9758, 2021: 10681, 2022: 10687, 2023: 14100, 2024: 19340, 2025: 27937
+```json
+{"key": "2016", "count": 12885}
+{"key": "2017", "count": 12159}
+{"key": "2018", "count": 14058}
+{"key": "2019", "count": 15218}
+{"key": "2020", "count": 16195}
+{"key": "2021", "count": 16264}
+{"key": "2022", "count": 15386}
+{"key": "2023", "count": 19376}
+{"key": "2024", "count": 26210}
+{"key": "2025", "count": 37039}
+```
+```json
+{"key": "2016", "count": 6206}
+{"key": "2017", "count": 6297}
+{"key": "2018", "count": 7852}
+{"key": "2019", "count": 9121}
+{"key": "2020", "count": 9758}
+{"key": "2021", "count": 10681}
+{"key": "2022", "count": 10687}
+{"key": "2023", "count": 14100}
+{"key": "2024", "count": 19340}
+{"key": "2025", "count": 27937}
+```
 
 ### PULL 2 — 2026-11-23
 - R1: GET https://api.openalex.org/works?filter=topics.id:T10181,publication_year:2016-2025&group_by=publication_year&mailto=rivet-research@example.com — 2026-11-23 15:59:21 UTC — HTTP 200 — meta count 183456
 - R2: GET https://api.openalex.org/works?filter=topics.id:T10181,publication_year:2016-2025,open_access.is_oa:true&group_by=publication_year&mailto=rivet-research@example.com — 2026-11-23 15:59:22 UTC — HTTP 200 — meta count 120690
 - Date header (source time) R1: Mon, 23 Nov 2026 15:59:22 GMT
 - Date header (source time) R2: Mon, 23 Nov 2026 15:59:22 GMT
+```json
+{"key": "2016", "count": 12909}
+{"key": "2017", "count": 12123}
+{"key": "2018", "count": 14007}
+{"key": "2019", "count": 15032}
+{"key": "2020", "count": 16187}
+{"key": "2021", "count": 16037}
+{"key": "2022", "count": 15278}
+{"key": "2023", "count": 19333}
+{"key": "2024", "count": 26006}
+{"key": "2025", "count": 36544}
+```
+```json
+{"key": "2016", "count": 6187}
+{"key": "2017", "count": 6295}
+{"key": "2018", "count": 7834}
+{"key": "2019", "count": 8936}
+{"key": "2020", "count": 9749}
+{"key": "2021", "count": 10484}
+{"key": "2022", "count": 10578}
+{"key": "2023", "count": 14055}
+{"key": "2024", "count": 19151}
+{"key": "2025", "count": 27421}
+```
 
 ### PULL 3 — 2026-11-24 (fresh pull, source of the attached PULL 3 CSV)
 - R1: GET https://api.openalex.org/works?filter=topics.id:T10181,publication_year:2016-2025&group_by=publication_year&mailto=rivet-research@example.com — 2026-11-24 18:09:14 UTC — HTTP 200 — meta count 183369
 - R2: GET https://api.openalex.org/works?filter=topics.id:T10181,publication_year:2016-2025,open_access.is_oa:true&group_by=publication_year&mailto=rivet-research@example.com — 2026-11-24 18:09:14 UTC — HTTP 200 — meta count 120711
 - Date header (source time) R1: Tue, 24 Nov 2026 18:09:14 GMT
 - Date header (source time) R2: Tue, 24 Nov 2026 18:09:14 GMT
-- group_by entries as returned, R1 (works):
-  - 2016: 12927
-  - 2017: 12132
-  - 2018: 14021
-  - 2019: 15042
-  - 2020: 16201
-  - 2021: 16049
-  - 2022: 15289
-  - 2023: 19317
-  - 2024: 25923
-  - 2025: 36468
-- group_by entries as returned, R2 (open access):
-  - 2016: 6222
-  - 2017: 6306
-  - 2018: 7867
-  - 2019: 8934
-  - 2020: 9755
-  - 2021: 10480
-  - 2022: 10606
-  - 2023: 14039
-  - 2024: 19108
-  - 2025: 27394
+```json
+[
+ {
+  "key": "2016",
+  "key_display_name": "2016",
+  "count": 12927
+ },
+ {
+  "key": "2017",
+  "key_display_name": "2017",
+  "count": 12132
+ },
+ {
+  "key": "2018",
+  "key_display_name": "2018",
+  "count": 14021
+ },
+ {
+  "key": "2019",
+  "key_display_name": "2019",
+  "count": 15042
+ },
+ {
+  "key": "2020",
+  "key_display_name": "2020",
+  "count": 16201
+ },
+ {
+  "key": "2021",
+  "key_display_name": "2021",
+  "count": 16049
+ },
+ {
+  "key": "2022",
+  "key_display_name": "2022",
+  "count": 15289
+ },
+ {
+  "key": "2023",
+  "key_display_name": "2023",
+  "count": 19317
+ },
+ {
+  "key": "2024",
+  "key_display_name": "2024",
+  "count": 25923
+ },
+ {
+  "key": "2025",
+  "key_display_name": "2025",
+  "count": 36468
+ }
+]
+```
+```json
+[
+ {
+  "key": "2016",
+  "key_display_name": "2016",
+  "count": 6222
+ },
+ {
+  "key": "2017",
+  "key_display_name": "2017",
+  "count": 6306
+ },
+ {
+  "key": "2018",
+  "key_display_name": "2018",
+  "count": 7867
+ },
+ {
+  "key": "2019",
+  "key_display_name": "2019",
+  "count": 8934
+ },
+ {
+  "key": "2020",
+  "key_display_name": "2020",
+  "count": 9755
+ },
+ {
+  "key": "2021",
+  "key_display_name": "2021",
+  "count": 10480
+ },
+ {
+  "key": "2022",
+  "key_display_name": "2022",
+  "count": 10606
+ },
+ {
+  "key": "2023",
+  "key_display_name": "2023",
+  "count": 14039
+ },
+ {
+  "key": "2024",
+  "key_display_name": "2024",
+  "count": 19108
+ },
+ {
+  "key": "2025",
+  "key_display_name": "2025",
+  "count": 27394
+ }
+]
+```
