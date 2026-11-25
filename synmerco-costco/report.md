@@ -24,20 +24,20 @@ Filings with `filingDate` in 2025 or 2026: **179** rows (all rows of `filings.re
 | 144 | 33 |
 | 8-K | 21 |
 | 10-Q | 5 |
-| UPLOAD | 5 |
-| CORRESP | 5 |
 | 3 | 5 |
+| CORRESP | 5 |
+| UPLOAD | 5 |
+| 10-K | 2 |
+| 11-K | 2 |
+| 3/A | 2 |
 | PX14A6G | 2 |
 | SD | 2 |
-| 11-K | 2 |
-| 10-K | 2 |
-| 3/A | 2 |
 | ARS | 1 |
 | DEF 14A | 1 |
 | DEFA14A | 1 |
-| SCHEDULE 13G/A | 1 |
-| SCHEDULE 13G | 1 |
 | S-3ASR | 1 |
+| SCHEDULE 13G | 1 |
+| SCHEDULE 13G/A | 1 |
 
 ## Filings per filing month
 
@@ -96,3 +96,8 @@ Filings with `filingDate` in 2025 or 2026: **179** rows (all rows of `filings.re
 3. ✅ Form, month and 8-K item tables above recomputed directly from the same CSV rows; values as returned by the source (no renaming, no reordering).
 
 All counts and arithmetic reproduce from the excerpts/CSV: sum of form counts = sum of month counts = 179.
+
+## Revision 1 — CHECKLIST (A3)
+
+- **A3 [FIXED]** The form table did not sort ties by form name. Rows with equal counts are now ordered by the `form` string ascending (e.g. 10-Q, 3, CORRESP, UPLOAD at count 5; 10-K, 11-K, 3/A, PX14A6G, SD at count 2; SCHEDULE 13G before SCHEDULE 13G/A at count 1). Counts themselves are unchanged and still reproduce exactly from the attached CSV (form totals = month totals = 179).
+- **A1, A2**: unchanged — no edits to the PROOF, excerpts or CSV in this round.
