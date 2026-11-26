@@ -4,10 +4,21 @@
 
 The screen covers 300 AUTHORIZED FOR HIRE Florida carriers with add_date 20261101–20261114 (raw filter count = 300), fixed by dot_number at pull 1 and re-checked in three pulls 24 hours apart. In the last pull, 287 carriers carry at least one flag; the most common flag is no authority docket (286 carriers), and 17 carriers carry two or more flags. Shared-address groups: 3 groups, 8 members.
 
-## PROOF — raw filter count(*) excerpt
+## PROOF — raw filter count(*) excerpts (response body exactly as the source returned it, per pull)
 
+PULL 1:
 ```json
-300
+[{"cnt":"300"}]
+```
+
+PULL 2:
+```json
+[{"cnt":"315"}]
+```
+
+PULL 3:
+```json
+[{"cnt":"317"}]
 ```
 
 ## Flag tallies (last good pull: PULL 3)
@@ -68,6 +79,8 @@ With two or more flags, by power_units band:
 | 9721463 | LEGENDARIO TOWING LLC | no authority docket;drivers missing | 2 |
 
 ## Changes: PULL 2 vs PULL 1
+
+Counts: new = 15, gone = 0, changed = 21 keys (dot_numbers 4919967, 4988653, 5106584, 5122422, 5567120, 5946526, 5983399, 6004539, 6152806, 6252254, 6362883, 6971100, 7010140, 7143503, 7214117, 8282073, 9002865, 9248305, 9457581, 9541098, 9613423).
 
 Row counts: PULL 1 = 300, PULL 2 = 315 (later = earlier + new − gone: 315 = 300 + 15 − 0).
 
@@ -163,6 +176,8 @@ Changed (same key, a Changes column differs):
 
 ## Changes: PULL 3 vs PULL 2
 
+Counts: new = 2, gone = 0, changed = 2 keys (dot_numbers 6285058, 8150194).
+
 Row counts: PULL 2 = 315, PULL 3 = 317 (later = earlier + new − gone: 317 = 315 + 2 − 0).
 
 New (key only in the later pull): 7351971, 9234377
@@ -190,18 +205,36 @@ Changed (same key, a Changes column differs):
 - `https://data.transportation.gov/resource/az4n-8mr2.json?%24select=count%28%2A%29+as+cnt&%24where=phy_state+%3D+%27FL%27+AND+classdef+%3D+%27AUTHORIZED+FOR+HIRE%27+AND+add_date+%3E%3D+%2720261101%27+AND+add_date+%3C%3D+%2720261114%27` — 2026-11-24T20:52:49Z UTC — HTTP 200
 - `https://data.transportation.gov/resource/az4n-8mr2.json?%24limit=50000&%24offset=0&%24where=phy_state+%3D+%27FL%27+AND+classdef+%3D+%27AUTHORIZED+FOR+HIRE%27+AND+add_date+%3E%3D+%2720261101%27+AND+add_date+%3C%3D+%2720261114%27&%24order=dot_number&%24select=dot_number%2Clegal_name%2Cphy_street%2Cphy_city%2Cphy_zip%2Cadd_date%2Cstatus_code%2Cpower_units%2Ctotal_drivers%2Cdocket1prefix%2Cdocket1%2Cdocket1_status_code%2Ccarrier_mailing_state` — 2026-11-24T20:52:54Z UTC — HTTP 200
 - First response Date header (source time): Tue, 24 Nov 2026 20:52:55 GMT
+- count(*) response for this pull (raw body):
+
+```json
+[{"cnt":"300"}]
+```
+
 
 ### PULL 2
 
 - `https://data.transportation.gov/resource/az4n-8mr2.json?%24select=count%28%2A%29+as+cnt&%24where=phy_state+%3D+%27FL%27+AND+classdef+%3D+%27AUTHORIZED+FOR+HIRE%27+AND+add_date+%3E%3D+%2720261101%27+AND+add_date+%3C%3D+%2720261114%27` — 2026-11-25T21:04:51Z UTC — HTTP 200
 - `https://data.transportation.gov/resource/az4n-8mr2.json?%24limit=50000&%24offset=0&%24where=phy_state+%3D+%27FL%27+AND+classdef+%3D+%27AUTHORIZED+FOR+HIRE%27+AND+add_date+%3E%3D+%2720261101%27+AND+add_date+%3C%3D+%2720261114%27&%24order=dot_number&%24select=dot_number%2Clegal_name%2Cphy_street%2Cphy_city%2Cphy_zip%2Cadd_date%2Cstatus_code%2Cpower_units%2Ctotal_drivers%2Cdocket1prefix%2Cdocket1%2Cdocket1_status_code%2Ccarrier_mailing_state` — 2026-11-25T21:04:52Z UTC — HTTP 200
 - First response Date header (source time): Wed, 25 Nov 2026 21:04:53 GMT
+- count(*) response for this pull (raw body):
+
+```json
+[{"cnt":"315"}]
+```
+
 
 ### PULL 3
 
 - `https://data.transportation.gov/resource/az4n-8mr2.json?%24select=count%28%2A%29+as+cnt&%24where=phy_state+%3D+%27FL%27+AND+classdef+%3D+%27AUTHORIZED+FOR+HIRE%27+AND+add_date+%3E%3D+%2720261101%27+AND+add_date+%3C%3D+%2720261114%27` — 2026-11-26T21:25:47Z UTC — HTTP 200
 - `https://data.transportation.gov/resource/az4n-8mr2.json?%24limit=50000&%24offset=0&%24where=phy_state+%3D+%27FL%27+AND+classdef+%3D+%27AUTHORIZED+FOR+HIRE%27+AND+add_date+%3E%3D+%2720261101%27+AND+add_date+%3C%3D+%2720261114%27&%24order=dot_number&%24select=dot_number%2Clegal_name%2Cphy_street%2Cphy_city%2Cphy_zip%2Cadd_date%2Cstatus_code%2Cpower_units%2Ctotal_drivers%2Cdocket1prefix%2Cdocket1%2Cdocket1_status_code%2Ccarrier_mailing_state` — 2026-11-26T21:25:48Z UTC — HTTP 200
 - First response Date header (source time): Thu, 26 Nov 2026 21:25:49 GMT
+- count(*) response for this pull (raw body):
+
+```json
+[{"cnt":"317"}]
+```
+
 
 ### Raw rows of every shared-address group member (last good pull)
 
